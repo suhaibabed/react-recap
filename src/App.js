@@ -8,9 +8,9 @@ const App = () => {
   return (
     <main>
       <div className="container">
-        {/* <HomeScreen /> */}
+        <HomeScreen />
         {/* <Counter /> */}
-        <RedToolkit />
+        {/* <RedToolkit /> */}
       </div>
     </main>
   );
