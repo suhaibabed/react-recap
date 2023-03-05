@@ -6,10 +6,11 @@ import axios from "axios";
 import "./Styles.css";
 
 const HomeScreen = () => {
-  const [state, setState] = useState("");
+  // const [state, setState] = useState("");
   const [value, setValue] = useState("");
   const [list, setList] = useState([]);
   const [error, setError] = useState("");
+
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -40,7 +41,7 @@ const HomeScreen = () => {
             }}
             value={value}
           />
-          {state.error ? <span>{error}</span> : null}
+          {error ? <span>{error}</span> : null}
         </div>
         <Button
           text="Add"
