@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct, fetchProducts } from "./../store/actions/productActions";
-
+// import { addProduct, fetchProducts } from "./../store/actions/productActions";
+import { addProduct, fetchProducts } from "../RTK/slices/productSlice";
 const Products = () => {
   const products = useSelector((state) => state.products);
   console.log(products);

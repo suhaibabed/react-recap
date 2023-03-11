@@ -1,7 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Products from "./components/Products";
-import { deposite, withdraw } from "./store/actions/bankActions";
+import { deposite, withdraw } from "./RTK/slices/bankSlice";
+// import { deposite, withdraw } from "./store/actions/bankActions";
 
 const App = () => {
   const state = useSelector((state) => state.bank);
