@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import BankReducer from "./slices/bankSlice";
-import addProducts from "./slices/productSlice";
+import productsSlice from "./slices/productSlice";
+import cartSlice from "./slices/cartSlice";
 
 export const store = configureStore({
   reducer: {
-    bank: BankReducer,
-    products: addProducts,
+    products: productsSlice,
+    cart: cartSlice,
   },
 });

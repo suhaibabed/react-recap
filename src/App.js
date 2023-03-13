@@ -1,22 +1,17 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { Routes, Route } from "react-router-dom";
+import AppNavbar from "./components/AppNavbar";
 import Products from "./components/Products";
-import { deposite, withdraw } from "./RTK/slices/bankSlice";
-// import { deposite, withdraw } from "./store/actions/bankActions";
+import Cart from "./components/Cart";
 
 const App = () => {
-  const state = useSelector((state) => state.bank);
-  const dispatch = useDispatch();
-  console.log(state);
   return (
-    <div className="App">
-      <div>
-        <p>bank account balance: {state}</p>
-        <button onClick={() => dispatch(withdraw(100))}>withdraw</button>
-        <br></br>
-        <button onClick={() => dispatch(deposite(300))}>deposite</button>
-      </div>
-      <Products />
+    <div>
+      <AppNavbar />
+      <Routes>
+        <Route path="/" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
     </div>
   );
 };
